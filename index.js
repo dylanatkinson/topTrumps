@@ -24,8 +24,12 @@ const p2CardSchwifty = document.getElementById("p2-schwifty");
 const winnerIs = document.getElementById("winner");
 const roundWinner = document.getElementById("round-winner");
 const selector = document.getElementById("selector");
+const p1DeckSize = document.getElementById("p1-deck");
+const p2DeckSize = document.getElementById("p2-deck");
 
 selector.style.visibility = "hidden";
+p1DeckSize.style.visibility = "hidden";
+p2DeckSize.style.visibility = "hidden";
 restartButton.style.visibility = "hidden";
 intelButton.style.visibility = "hidden";
 moralButton.style.visibility = "hidden";
@@ -98,9 +102,6 @@ for (let i = 0; i < deck.length; i++) {
 
 let deckOne = deck.slice(0, 10);
 let deckTwo = deck.slice(10, 20);
-
-// console.log(deckOne[0]);
-// console.log(deckTwo[0]);
 
 const intelComparison = () => {
     if (deckOne[0].intelligence < deckTwo[0].intelligence) {
@@ -182,20 +183,6 @@ const schwiftyComparison = () => {
     };
 };
 
-// const cardComparison = () => {
-//     if (deckOne[0].intelligence < deckTwo[0].intelligence) {
-//         const drawPile = deckOne.shift();
-//         const tempPile = deckTwo.shift();
-//         deckTwo.push(tempPile);
-//         deckTwo.push(drawPile);
-//     } else if (deckTwo[0].intelligence < deckOne[0].intelligence) {
-//         const drawPile = deckTwo.shift();
-//         const tempPile = deckOne.shift();
-//         deckOne.push(tempPile);
-//         deckOne.push(drawPile);
-//     };
-// };
-
 const createCard = () => {
     p1CardTitle.textContent = deckOne[0].name;
     p2CardTitle.textContent = deckTwo[0].name;
@@ -209,14 +196,14 @@ const createCard = () => {
     p2CardNotoriety.textContent = `Notoriety: ${deckTwo[0].notoriety}`;
     p1CardSchwifty.textContent = `Schwifty: ${deckOne[0].schwifty}`;
     p2CardSchwifty.textContent = `Schwifty: ${deckTwo[0].schwifty}`;
+    p1DeckSize.textContent = `Cards in P1 Deck: ${deckOne.length}`;
+    p2DeckSize.textContent = `Cards in P2 Deck: ${deckTwo.length}`;
 };
 
 const winOrLose = () => {
     if (deckOne.length == 20) {
-        // console.log("Player One Wins");
         winnerIs.textContent = "Player One Wins";
     } else if (deckTwo.length == 20) {
-        // console.log("Player Two Wins");
         winnerIs.textContent = "Player Two Wins";
     };
 };
@@ -235,12 +222,9 @@ const endGame = () => {
 };
 
 startButton.addEventListener("click", () => {
-    // createCard();
-    // cardComparison();
-    // console.log(deckOne.length);
-    // console.log(deckTwo.length);
-    // endGame();
     selector.style.visibility = "visible";
+    p1DeckSize.style.visibility = "visible";
+    p2DeckSize.style.visibility = "visible";
     startButton.style.visibility = "hidden";
     intelButton.style.visibility = "visible";
     moralButton.style.visibility = "visible";

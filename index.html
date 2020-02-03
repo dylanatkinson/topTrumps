@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <link rel="stylesheet" href="style.css">
@@ -7,37 +8,51 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Rick and Morty Top Trumps</title>
 </head>
+
 <body>
-    <p id="p1-card-title"></p>
-    <ul id="p1-stats">
-        <li id="p1-intel"></li>
-        <li id="p1-moral"></li>
-        <li id="p1-violence"></li>
-        <li id="p1-notoriety"></li>
-        <li id="p1-schwifty"></li>
-    </ul>
-
-    <p id="p2-card-title"></p>
-    <ul id="p2-stats">
-        <li id="p2-intel"></li>
-        <li id="p2-moral"></li>
-        <li id="p2-violence"></li>
-        <li id="p2-notoriety"></li>
-        <li id="p2-schwifty"></li>
-    </ul>
-
-    <p id="round-winner"></p>
-    <p id="winner"></p>
-
-    <button id="start-btn">Click to Start</button>
-    <p id="selector">Select Attribute for Next Round</p>
-    <button id="intel">Intelligence</button>
-    <button id="morality">Morality</button>
-    <button id="violence">Violence</button>
-    <button id="notoriety">Notoriety</button>
-    <button id="schwifty">Schwifty</button>
-    <button id="restart-btn">Click to Restart</button>
+    <div id="container">
+        <h1>Rick and Morty Top Trumps</h1>
+        <div id="toptrumps">
+            <div id="playerone">
+                <h2 id="p1-card-title"></h2>
+                <ul id="p1-stats">
+                    <li id="p1-intel"></li>
+                    <li id="p1-moral"></li>
+                    <li id="p1-violence"></li>
+                    <li id="p1-notoriety"></li>
+                    <li id="p1-schwifty"></li>
+                </ul>
+            </div>
+            <p id="round-winner"></p>
+            <p id="winner"></p>
+            <div id="playertwo">
+                <h2 id="p2-card-title"></h2>
+                <ul id="p2-stats">
+                    <li id="p2-intel"></li>
+                    <li id="p2-moral"></li>
+                    <li id="p2-violence"></li>
+                    <li id="p2-notoriety"></li>
+                    <li id="p2-schwifty"></li>
+                </ul>
+            </div>
+        </div>
+        <div id="gameStats">
+            <p id="p1-deck"></p>
+            <p id="p2-deck"></p>
+        </div>
+        <h3 id="selector">Select Attribute for Next Round</h3>
+        <button id="start-btn">Click to Start</button>
+        <button id="restart-btn">Click to Restart</button>
+        <div id="gameControls">
+            <button id="intel">Intelligence</button>
+            <button id="morality">Morality</button>
+            <button id="violence">Violence</button>
+            <button id="notoriety">Notoriety</button>
+            <button id="schwifty">Schwifty</button>
+        </div>
+    </div>
     <script src="index.js"></script>
-    
+
 </body>
+
 </html>

@@ -1,3 +1,50 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    line-height: 2;
+}
+
+#container {
+    border: 5px solid black;
+    height: 100vh;
+    padding: 2vh;
+    text-align: center;
+}
+
+#toptrumps {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+#playerone, #playertwo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 2vh;
+    width: 37vw;
+}
+
 #p1-stats, #p2-stats {
     list-style-type: none;
+}
+
+#gameControls {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+#gameStats {
+    display: flex;
+    justify-content: space-evenly;
+    margin: 2vh;
+}
+
+button {
+    height: 40px;
+    width: 120px;
+}
+
+#round-winner {
+    margin-top: 10vh;
 }
