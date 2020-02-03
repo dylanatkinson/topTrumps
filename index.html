@@ -2,16 +2,42 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <link rel="stylesheet" href="style.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <title>Rick and Morty Top Trumps</title>
 </head>
 <body>
-    <p id="p1-card-title"></p> <p id="p1-intel"></p>
-    <p id="p2-card-title"></p> <p id="p2-intel"></p>
-    <p id="p1-deck"></p> <p id="p2-deck"></p>
+    <p id="p1-card-title"></p>
+    <ul id="p1-stats">
+        <li id="p1-intel"></li>
+        <li id="p1-moral"></li>
+        <li id="p1-violence"></li>
+        <li id="p1-notoriety"></li>
+        <li id="p1-schwifty"></li>
+    </ul>
+
+    <p id="p2-card-title"></p>
+    <ul id="p2-stats">
+        <li id="p2-intel"></li>
+        <li id="p2-moral"></li>
+        <li id="p2-violence"></li>
+        <li id="p2-notoriety"></li>
+        <li id="p2-schwifty"></li>
+    </ul>
+
+    <p id="round-winner"></p>
     <p id="winner"></p>
+
     <button id="start-btn">Click to Start</button>
+    <p id="selector">Select Attribute for Next Round</p>
+    <button id="intel">Intelligence</button>
+    <button id="morality">Morality</button>
+    <button id="violence">Violence</button>
+    <button id="notoriety">Notoriety</button>
+    <button id="schwifty">Schwifty</button>
+    <button id="restart-btn">Click to Restart</button>
     <script src="index.js"></script>
+    
 </body>
 </html>
